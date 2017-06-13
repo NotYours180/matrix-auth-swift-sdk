@@ -824,6 +824,7 @@
 				52BB9C241EF074B300FBB35E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BB9C301EF074BD00FBB35E /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK iOS" */ = {
 			isa = XCConfigurationList;
@@ -832,6 +833,7 @@
 				52BB9C321EF074BD00FBB35E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BB9C3D1EF074C500FBB35E /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK watchOS" */ = {
 			isa = XCConfigurationList;
@@ -840,6 +842,7 @@
 				52BB9C3F1EF074C500FBB35E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BB9C4A1EF074D200FBB35E /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK tvOS" */ = {
 			isa = XCConfigurationList;
@@ -848,6 +851,7 @@
 				52BB9C4C1EF074D200FBB35E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
