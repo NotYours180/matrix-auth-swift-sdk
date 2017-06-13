@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.4.0)
+  - CryptoSwift (0.6.9)
+  - JSONWebToken (2.1.1):
+    - CryptoSwift (~> 0.6.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4)
+  - JSONWebToken (~> 2)
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
+  JSONWebToken: 21a2c3ea5f034882e90f28c656ffce0396155907
+
+PODFILE CHECKSUM: 0aded08592e372057fb5903f2a65e43a87f15dc6
+
+COCOAPODS: 1.2.1
