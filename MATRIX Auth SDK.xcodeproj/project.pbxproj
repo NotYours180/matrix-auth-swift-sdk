@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		173B1C3630AECCD5FEAD5AD6 /* Pods_MATRIX_Auth_SDK_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */; };
 		42133E898620DF9F9E29B4EB /* Pods_MATRIX_Auth_SDK_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */; };
-		52BB9C511EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */; };
-		52BB9C521EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */; };
-		52BB9C531EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */; };
-		52BB9C541EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */; };
+		52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		59ADDE9866AA28665E3B1DAC /* Pods_MATRIX_Auth_SDK_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */; };
 		8E3742F3AF17916885EA9B7B /* Pods_MATRIX_Auth_SDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3061B16DAD8371993A7FA71 /* Pods_MATRIX_Auth_SDK_iOS.framework */; };
 /* End PBXBuildFile section */
@@ -26,7 +26,7 @@
 		52BB9C381EF074C500FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C4E1EF0759100FBB35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuthSDK.swift; sourceTree = "<group>"; };
+		52BB9C501EF075B300FBB35E /* MatrixAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuth.swift; sourceTree = "<group>"; };
 		5881A6C531D499516C476852 /* Pods-MATRIX Auth SDK iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EB6853581B35EA9EAE0A79 /* Pods-MATRIX Auth SDK tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS/Pods-MATRIX Auth SDK tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		52BB9C4F1EF0759100FBB35E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				52BB9C501EF075B300FBB35E /* MatrixAuthSDK.swift */,
+				52BB9C501EF075B300FBB35E /* MatrixAuth.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -462,7 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BB9C511EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */,
+				52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BB9C521EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */,
+				52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BB9C531EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */,
+				52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BB9C541EF075B300FBB35E /* MatrixAuthSDK.swift in Sources */,
+				52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
