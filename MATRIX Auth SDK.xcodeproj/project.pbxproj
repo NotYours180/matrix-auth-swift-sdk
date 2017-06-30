@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		173B1C3630AECCD5FEAD5AD6 /* Pods_MATRIX_Auth_SDK_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */; };
 		42133E898620DF9F9E29B4EB /* Pods_MATRIX_Auth_SDK_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */; };
+		525730681F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
+		525730691F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
+		5257306A1F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
+		5257306B1F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
 		52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
@@ -21,6 +25,7 @@
 		247D74F52DB18F59405712C6 /* Pods-MATRIX Auth SDK tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS/Pods-MATRIX Auth SDK tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		3917347407B3769DAB2121FC /* Pods-MATRIX Auth SDK macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK macOS/Pods-MATRIX Auth SDK macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4C08F28CE09CCBDD817E3672 /* Pods-MATRIX Auth SDK watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK watchOS/Pods-MATRIX Auth SDK watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		525730671F06C0C100CA843C /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		52BB9C1D1EF074B300FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C2B1EF074BD00FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C381EF074C500FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				52BB9C501EF075B300FBB35E /* MatrixAuth.swift */,
+				525730671F06C0C100CA843C /* Environment.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */,
+				525730681F06C0C100CA843C /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */,
+				525730691F06C0C100CA843C /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */,
+				5257306A1F06C0C100CA843C /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */,
+				5257306B1F06C0C100CA843C /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
