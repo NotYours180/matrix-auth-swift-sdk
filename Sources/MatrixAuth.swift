@@ -29,18 +29,25 @@ import Foundation
 import Alamofire
 import JWT
 
+/// Handles MATRIX API authorization.
 public final class MatrixAuth {
 
+    /// An error thrown by `MatrixAuth`.
     public enum Error: Swift.Error {
 
+        /// The provided URL is invalid (e.g. empty).
         case invalidBaseURL
 
+        /// The provided client ID is invalid (e.g. empty).
         case invalidClientID
 
+        /// The provided client secret is invalid (e.g. empty).
         case invalidClientSecret
 
+        /// Failed to get a user ID or expiration from a JWT.
         case decodeFailure
 
+        /// Failed to get user access token.
         case unauthenticated
 
     }
@@ -58,8 +65,10 @@ public final class MatrixAuth {
 
     private var _accessTokenToRefresh: String?
 
+    /// The current user ID.
     public var userID: String?
 
+    /// The user access token for the current authorized user. Fails silently if the token could not be decoded.
     public var userAccessToken: String? {
         didSet {
             if let token = userAccessToken, !token.isEmpty {
@@ -68,6 +77,9 @@ public final class MatrixAuth {
         }
     }
 
+    /// Creates an instance with a base URL, client ID, and client secret.
+    ///
+    /// - throws: `MatrixAuth.Error` if any parameter is invalid (e.g. empty)
     public init(baseURL: String, clientID: String, clientSecret: String) throws {
         guard !baseURL.isEmpty else {
             throw Error.invalidBaseURL
@@ -83,6 +95,9 @@ public final class MatrixAuth {
         _clientSecret = clientSecret
     }
 
+    /// Decodes the JSON web token, obtaining a user ID and refresh token.
+    ///
+    /// - throws: `Error.decodeFailure` if the user ID or expiration could not be retrieved.
     private func decodeJWT(token: String) throws {
         if let rt = _refreshToken {
             rt.invalidate()
@@ -161,6 +176,7 @@ public final class MatrixAuth {
         }
     }
 
+    /// Authenticates `username` with `password` and sets the corresponding values within `self`.
     public func authenticate(username: String, password: String, completionHandler: @escaping CompletionHandler) {
         let url = _baseURL + "/v1/oauth2/user/token"
         let parameters: [String: Any] = [
@@ -191,6 +207,7 @@ public final class MatrixAuth {
         }
     }
 
+    /// Logs the current user out, invalidating the user access token.
     public func logout() {
         userAccessToken = nil
         _accessTokenToRefresh = nil
@@ -200,6 +217,7 @@ public final class MatrixAuth {
         }
     }
 
+    /// Registers a new user with a `username`, `password`, and `role`.
     public func registerNewUser(username: String, password: String, role: String, completionHandler: @escaping CompletionHandler) {
         let url = _baseURL + "/v1/oauth2/user/register"
         let parameters: [String: Any] = [
@@ -217,6 +235,9 @@ public final class MatrixAuth {
         }
     }
 
+    /// Gets the secret for `deviceID`, handling the result in `completionHandler`.
+    ///
+    /// - throws: `Error.unauthenticated` if the user access token is invalid (e.g. `nil` or empty).
     public func getDeviceSecret(deviceID: String, completionHandler: @escaping CompletionHandler) throws {
         guard let uat = userAccessToken, !uat.isEmpty else {
             throw Error.unauthenticated
@@ -235,6 +256,7 @@ public final class MatrixAuth {
         }
     }
 
+    /// Sends a request to restore the password for `username`.
     public func forgotPassword(username: String, completionHandler: @escaping CompletionHandler) {
         let url = _baseURL + "/v1/user/request/restore_password"
         let parameters = [
@@ -249,6 +271,9 @@ public final class MatrixAuth {
         }
     }
 
+    /// Gets the user details
+    ///
+    /// - throws: `Error.unauthenticated` if the user access token is invalid (e.g. `nil` or empty).
     public func getUserDetails(userID: String, completionHandler: @escaping CompletionHandler) throws {
         guard let uat = userAccessToken, !uat.isEmpty else {
             throw Error.unauthenticated
