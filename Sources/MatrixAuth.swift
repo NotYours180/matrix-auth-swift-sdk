@@ -53,7 +53,7 @@ public final class MatrixAuth {
     }
 
     /// A completion handler that takes a success boolean and result dictionary.
-    public typealias CompletionHandler = (Bool, [String: AnyObject]) -> ()
+    public typealias CompletionHandler = (Bool, [String: Any]) -> ()
 
     private var _baseURL: String
 
@@ -130,29 +130,29 @@ public final class MatrixAuth {
 
     private func genericRequestResponse(response: Any?, statusCode: Int?, error: Swift.Error?, completionHandler: @escaping CompletionHandler) {
         var requestSuccess = false
-        let result: [String: AnyObject]
+        let result: [String: Any]
 
         if let error = error {
-            result = ["message": error.localizedDescription as AnyObject]
-        } else if let json = response as? [String: AnyObject] {
+            result = ["message": error.localizedDescription]
+        } else if let json = response as? [String: Any] {
             if json["status"] as? String == "OK", let results = json["results"] {
-                if results is [AnyObject] {
+                if results is [Any] {
                     result = ["results": results]
                 } else if results is String {
                     result = ["message": results]
                 } else {
-                    result = results as! [String: AnyObject]
+                    result = results as! [String: Any]
                 }
                 requestSuccess = true
             } else if let errorMessage = json["error"] {
                 result = ["message": errorMessage]
             } else {
-                result = ["message": "Unknown error" as AnyObject]
+                result = ["message": "Unknown error"]
             }
         } else if let statusCode = statusCode {
-            result = ["status code": "\(statusCode)" as AnyObject]
+            result = ["status code": "\(statusCode)"]
         } else {
-            result = ["message": "Unknown error" as AnyObject]
+            result = ["message": "Unknown error"]
         }
 
         DispatchQueue.main.async {
