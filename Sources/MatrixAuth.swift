@@ -57,7 +57,7 @@ public final class MatrixAuth {
 
     private var _baseURL: String
 
-    private var _clientID: String
+    private var _clientId: String
 
     private var _clientSecret: String
 
@@ -66,7 +66,7 @@ public final class MatrixAuth {
     private var _accessTokenToRefresh: String?
 
     /// The current user ID.
-    public var userID: String?
+    public var userId: String?
 
     /// The user access token for the current authorized user. Fails silently if the token could not be decoded.
     public var userAccessToken: String? {
@@ -80,25 +80,25 @@ public final class MatrixAuth {
     /// Creates an instance for a given environment, client ID, and client secret.
     ///
     /// - throws: `MatrixAuth.Error` if the ID or secret are invalid (e.g. empty).
-    public convenience init(env: Environment, clientID: String, clientSecret: String) throws {
-        try self.init(baseURL: env.apiURL.absoluteString, clientID: clientID, clientSecret: clientSecret)
+    public convenience init(env: Environment, clientId: String, clientSecret: String) throws {
+        try self.init(baseURL: env.apiURL.absoluteString, clientId: clientId, clientSecret: clientSecret)
     }
 
     /// Creates an instance with a base URL, client ID, and client secret.
     ///
     /// - throws: `MatrixAuth.Error` if any parameter is invalid (e.g. empty)
-    public init(baseURL: String, clientID: String, clientSecret: String) throws {
+    public init(baseURL: String, clientId: String, clientSecret: String) throws {
         guard !baseURL.isEmpty else {
             throw Error.invalidBaseURL
         }
-        guard !clientID.isEmpty else {
+        guard !clientId.isEmpty else {
             throw Error.invalidClientID
         }
         guard !clientSecret.isEmpty else {
             throw Error.invalidClientSecret
         }
         _baseURL = baseURL
-        _clientID = clientID
+        _clientId = clientId
         _clientSecret = clientSecret
     }
 
@@ -117,7 +117,7 @@ public final class MatrixAuth {
             throw Error.decodeFailure
         }
 
-        userID = uid
+        userId = uid
         let date = Date(timeIntervalSince1970: exp)
         let seconds = date.timeIntervalSinceNow
 
@@ -163,7 +163,7 @@ public final class MatrixAuth {
     @objc private func refreshUserAccessToken() {
         let url = _baseURL + "/v1/oauth2/user/refresh_token"
         let parameters: [String: Any] = [
-            "client_id": _clientID,
+            "client_id": _clientId,
             "client_secret": _clientSecret,
             "grant_type": "refresh_token",
             "jwt_token": true,
@@ -187,7 +187,7 @@ public final class MatrixAuth {
     public func authenticate(username: String, password: String, completionHandler: @escaping CompletionHandler) {
         let url = _baseURL + "/v1/oauth2/user/token"
         let parameters: [String: Any] = [
-            "client_id": _clientID,
+            "client_id": _clientId,
             "client_secret": _clientSecret,
             "grant_type": "password",
             "jwt_token": true,
@@ -218,7 +218,7 @@ public final class MatrixAuth {
     public func logout() {
         userAccessToken = nil
         _accessTokenToRefresh = nil
-        userID = nil
+        userId = nil
         if let rt = _refreshToken {
             rt.invalidate()
         }
@@ -232,7 +232,7 @@ public final class MatrixAuth {
             "password": password,
             "role": role,
             "active": true,
-            "client_id": _clientID
+            "client_id": _clientId
         ]
         request(url, method: .post, parameters: parameters).responseJSON { [weak self] response in
             self?.genericRequestResponse(response: response.result.value,
@@ -281,13 +281,13 @@ public final class MatrixAuth {
     /// Gets the user details
     ///
     /// - throws: `Error.unauthenticated` if the user access token is invalid (e.g. `nil` or empty).
-    public func getUserDetails(userID: String, completionHandler: @escaping CompletionHandler) throws {
+    public func getUserDetails(userId: String, completionHandler: @escaping CompletionHandler) throws {
         guard let uat = userAccessToken, !uat.isEmpty else {
             throw Error.unauthenticated
         }
         let url = _baseURL + "/admin/user/details"
         let parameters = [
-            "user_id": userID,
+            "user_id": userId,
             "access_token": uat
         ]
 
