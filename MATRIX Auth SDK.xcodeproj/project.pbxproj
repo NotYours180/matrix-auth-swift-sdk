@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D6A819C646F9039B6CB109E /* Pods_MATRIX_Auth_SDK_tvOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E289AC4DBDB38D169C2B1B09 /* Pods_MATRIX_Auth_SDK_tvOS_Tests.framework */; };
 		173B1C3630AECCD5FEAD5AD6 /* Pods_MATRIX_Auth_SDK_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */; };
 		42133E898620DF9F9E29B4EB /* Pods_MATRIX_Auth_SDK_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */; };
+		523B6C1A1F19035E003224A4 /* MatrixAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BB9C1D1EF074B300FBB35E /* MatrixAuthSDK.framework */; };
+		523B6C291F19036F003224A4 /* MatrixAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BB9C2B1EF074BD00FBB35E /* MatrixAuthSDK.framework */; };
+		523B6C381F19037B003224A4 /* MatrixAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */; };
+		523B6C441F19041A003224A4 /* MatrixAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B6C401F19041A003224A4 /* MatrixAuthTests.swift */; };
+		523B6C451F19041A003224A4 /* MatrixAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B6C401F19041A003224A4 /* MatrixAuthTests.swift */; };
+		523B6C461F19041A003224A4 /* MatrixAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B6C401F19041A003224A4 /* MatrixAuthTests.swift */; };
 		525730681F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
 		525730691F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
 		5257306A1F06C0C100CA843C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525730671F06C0C100CA843C /* Environment.swift */; };
@@ -17,14 +24,50 @@
 		52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		56DAF30EE2A455A7D24D9BE0 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAA81CA7AA8FA5EC92A08D3 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework */; };
 		59ADDE9866AA28665E3B1DAC /* Pods_MATRIX_Auth_SDK_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */; };
 		8E3742F3AF17916885EA9B7B /* Pods_MATRIX_Auth_SDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3061B16DAD8371993A7FA71 /* Pods_MATRIX_Auth_SDK_iOS.framework */; };
+		F4EDF179015224894BE6AB44 /* Pods_MATRIX_Auth_SDK_macOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECCA1256682A323899BC476 /* Pods_MATRIX_Auth_SDK_macOS_Tests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		523B6C1B1F19035E003224A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52BB9C121EF0747100FBB35E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52BB9C1C1EF074B300FBB35E;
+			remoteInfo = "MATRIX Auth SDK macOS";
+		};
+		523B6C2A1F19036F003224A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52BB9C121EF0747100FBB35E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52BB9C2A1EF074BD00FBB35E;
+			remoteInfo = "MATRIX Auth SDK iOS";
+		};
+		523B6C391F19037B003224A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52BB9C121EF0747100FBB35E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52BB9C441EF074D200FBB35E;
+			remoteInfo = "MATRIX Auth SDK tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1DAA81CA7AA8FA5EC92A08D3 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		229BEF971700D72229ECCAD6 /* Pods-MATRIX Auth SDK iOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		247D74F52DB18F59405712C6 /* Pods-MATRIX Auth SDK tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS/Pods-MATRIX Auth SDK tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		387B014853FEBF2FF27DBC15 /* Pods-MATRIX Auth SDK iOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3917347407B3769DAB2121FC /* Pods-MATRIX Auth SDK macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK macOS/Pods-MATRIX Auth SDK macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3E42F70857765D1AEDA79A77 /* Pods-MATRIX Auth SDK macOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK macOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK macOS Tests/Pods-MATRIX Auth SDK macOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		42380454C6259084BD842A3A /* Pods-MATRIX Auth SDK tvOS Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C08F28CE09CCBDD817E3672 /* Pods-MATRIX Auth SDK watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK watchOS/Pods-MATRIX Auth SDK watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		523B6C151F19035E003224A4 /* MATRIX Auth SDK macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MATRIX Auth SDK macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B6C241F19036F003224A4 /* MATRIX Auth SDK iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MATRIX Auth SDK iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B6C331F19037B003224A4 /* MATRIX Auth SDK tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MATRIX Auth SDK tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523B6C3F1F19041A003224A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523B6C401F19041A003224A4 /* MatrixAuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuthTests.swift; sourceTree = "<group>"; };
 		525730671F06C0C100CA843C /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		52BB9C1D1EF074B300FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C2B1EF074BD00FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,18 +75,49 @@
 		52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C4E1EF0759100FBB35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BB9C501EF075B300FBB35E /* MatrixAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuth.swift; sourceTree = "<group>"; };
+		577B008AA82A516F2AFD052F /* Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5881A6C531D499516C476852 /* Pods-MATRIX Auth SDK iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EB6853581B35EA9EAE0A79 /* Pods-MATRIX Auth SDK tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS/Pods-MATRIX Auth SDK tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA28B2C4F96DE97A6F65FFF /* Pods-MATRIX Auth SDK watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK watchOS/Pods-MATRIX Auth SDK watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		BEB7ED4A8F9766B5E3A466D0 /* Pods-MATRIX Auth SDK macOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK macOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK macOS Tests/Pods-MATRIX Auth SDK macOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C13F08D7C2D19C763CA0687D /* Pods-MATRIX Auth SDK iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DD8EEBF595484D97C25A0A48 /* Pods-MATRIX Auth SDK macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK macOS/Pods-MATRIX Auth SDK macOS.release.xcconfig"; sourceTree = "<group>"; };
+		E289AC4DBDB38D169C2B1B09 /* Pods_MATRIX_Auth_SDK_tvOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_tvOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3061B16DAD8371993A7FA71 /* Pods_MATRIX_Auth_SDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECCA1256682A323899BC476 /* Pods_MATRIX_Auth_SDK_macOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_macOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		523B6C121F19035E003224A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C1A1F19035E003224A4 /* MatrixAuthSDK.framework in Frameworks */,
+				F4EDF179015224894BE6AB44 /* Pods_MATRIX_Auth_SDK_macOS_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C211F19036F003224A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C291F19036F003224A4 /* MatrixAuthSDK.framework in Frameworks */,
+				56DAF30EE2A455A7D24D9BE0 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C301F19037B003224A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C381F19037B003224A4 /* MatrixAuthSDK.framework in Frameworks */,
+				0D6A819C646F9039B6CB109E /* Pods_MATRIX_Auth_SDK_tvOS_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BB9C191EF074B300FBB35E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,14 +160,27 @@
 				7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */,
 				9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */,
 				5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */,
+				1DAA81CA7AA8FA5EC92A08D3 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework */,
+				FECCA1256682A323899BC476 /* Pods_MATRIX_Auth_SDK_macOS_Tests.framework */,
+				E289AC4DBDB38D169C2B1B09 /* Pods_MATRIX_Auth_SDK_tvOS_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		523B6C3E1F19041A003224A4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				523B6C3F1F19041A003224A4 /* Info.plist */,
+				523B6C401F19041A003224A4 /* MatrixAuthTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		52BB9C111EF0747100FBB35E = {
 			isa = PBXGroup;
 			children = (
 				52BB9C4F1EF0759100FBB35E /* Sources */,
+				523B6C3E1F19041A003224A4 /* Tests */,
 				52BB9C4D1EF0759100FBB35E /* Resources */,
 				52BB9C1E1EF074B300FBB35E /* Products */,
 				F34431AF81F420ED5786CCC9 /* Pods */,
@@ -108,6 +195,9 @@
 				52BB9C2B1EF074BD00FBB35E /* MatrixAuthSDK.framework */,
 				52BB9C381EF074C500FBB35E /* MatrixAuthSDK.framework */,
 				52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */,
+				523B6C151F19035E003224A4 /* MATRIX Auth SDK macOS Tests.xctest */,
+				523B6C241F19036F003224A4 /* MATRIX Auth SDK iOS Tests.xctest */,
+				523B6C331F19037B003224A4 /* MATRIX Auth SDK tvOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +230,12 @@
 				63EB6853581B35EA9EAE0A79 /* Pods-MATRIX Auth SDK tvOS.release.xcconfig */,
 				4C08F28CE09CCBDD817E3672 /* Pods-MATRIX Auth SDK watchOS.debug.xcconfig */,
 				AFA28B2C4F96DE97A6F65FFF /* Pods-MATRIX Auth SDK watchOS.release.xcconfig */,
+				387B014853FEBF2FF27DBC15 /* Pods-MATRIX Auth SDK iOS Tests.debug.xcconfig */,
+				229BEF971700D72229ECCAD6 /* Pods-MATRIX Auth SDK iOS Tests.release.xcconfig */,
+				3E42F70857765D1AEDA79A77 /* Pods-MATRIX Auth SDK macOS Tests.debug.xcconfig */,
+				BEB7ED4A8F9766B5E3A466D0 /* Pods-MATRIX Auth SDK macOS Tests.release.xcconfig */,
+				42380454C6259084BD842A3A /* Pods-MATRIX Auth SDK tvOS Tests.debug.xcconfig */,
+				577B008AA82A516F2AFD052F /* Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -178,6 +274,69 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		523B6C141F19035E003224A4 /* MATRIX Auth SDK macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523B6C1F1F19035E003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK macOS Tests" */;
+			buildPhases = (
+				4518394D3307A1474F368217 /* [CP] Check Pods Manifest.lock */,
+				523B6C111F19035E003224A4 /* Sources */,
+				523B6C121F19035E003224A4 /* Frameworks */,
+				523B6C131F19035E003224A4 /* Resources */,
+				4F6478A21E70AFDCBBAB760F /* [CP] Embed Pods Frameworks */,
+				6880085BBF7A8A9EA6476A94 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523B6C1C1F19035E003224A4 /* PBXTargetDependency */,
+			);
+			name = "MATRIX Auth SDK macOS Tests";
+			productName = "MATRIX Auth SDK macOS Tests";
+			productReference = 523B6C151F19035E003224A4 /* MATRIX Auth SDK macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		523B6C231F19036F003224A4 /* MATRIX Auth SDK iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523B6C2C1F19036F003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK iOS Tests" */;
+			buildPhases = (
+				1F98B8D94D097154F1F2CC2F /* [CP] Check Pods Manifest.lock */,
+				523B6C201F19036F003224A4 /* Sources */,
+				523B6C211F19036F003224A4 /* Frameworks */,
+				523B6C221F19036F003224A4 /* Resources */,
+				B3AA7E4C1EBAFB98E865C8DA /* [CP] Embed Pods Frameworks */,
+				517DC6D310EEC00613D5A3AC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523B6C2B1F19036F003224A4 /* PBXTargetDependency */,
+			);
+			name = "MATRIX Auth SDK iOS Tests";
+			productName = "MATRIX Auth SDK iOS Tests";
+			productReference = 523B6C241F19036F003224A4 /* MATRIX Auth SDK iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		523B6C321F19037B003224A4 /* MATRIX Auth SDK tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523B6C3B1F19037B003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK tvOS Tests" */;
+			buildPhases = (
+				D8A909EAEB080099465862DE /* [CP] Check Pods Manifest.lock */,
+				523B6C2F1F19037B003224A4 /* Sources */,
+				523B6C301F19037B003224A4 /* Frameworks */,
+				523B6C311F19037B003224A4 /* Resources */,
+				B3C014B4D0661E6B15F25671 /* [CP] Embed Pods Frameworks */,
+				CEC2A3AF21CC3DBE676C1F9F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				523B6C3A1F19037B003224A4 /* PBXTargetDependency */,
+			);
+			name = "MATRIX Auth SDK tvOS Tests";
+			productName = "MATRIX Auth SDK tvOS Tests";
+			productReference = 523B6C331F19037B003224A4 /* MATRIX Auth SDK tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		52BB9C1C1EF074B300FBB35E /* MATRIX Auth SDK macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52BB9C251EF074B300FBB35E /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK macOS" */;
@@ -264,9 +423,22 @@
 		52BB9C121EF0747100FBB35E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "MATRIX Labs";
 				TargetAttributes = {
+					523B6C141F19035E003224A4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					523B6C231F19036F003224A4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					523B6C321F19037B003224A4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					52BB9C1C1EF074B300FBB35E = {
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0830;
@@ -305,11 +477,35 @@
 				52BB9C2A1EF074BD00FBB35E /* MATRIX Auth SDK iOS */,
 				52BB9C371EF074C500FBB35E /* MATRIX Auth SDK watchOS */,
 				52BB9C441EF074D200FBB35E /* MATRIX Auth SDK tvOS */,
+				523B6C141F19035E003224A4 /* MATRIX Auth SDK macOS Tests */,
+				523B6C231F19036F003224A4 /* MATRIX Auth SDK iOS Tests */,
+				523B6C321F19037B003224A4 /* MATRIX Auth SDK tvOS Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		523B6C131F19035E003224A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C221F19036F003224A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C311F19037B003224A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BB9C1B1EF074B300FBB35E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,13 +543,52 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK watchOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F98B8D94D097154F1F2CC2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK iOS Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4518394D3307A1474F368217 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK macOS Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4A7ADFDAB160F9BA211A76BF /* [CP] Copy Pods Resources */ = {
@@ -369,6 +604,58 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F6478A21E70AFDCBBAB760F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK macOS Tests/Pods-MATRIX Auth SDK macOS Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken-macOS/JWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK macOS Tests/Pods-MATRIX Auth SDK macOS Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		517DC6D310EEC00613D5A3AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6880085BBF7A8A9EA6476A94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK macOS Tests/Pods-MATRIX Auth SDK macOS Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D0E1B6C69621792B9BB04A3 /* [CP] Copy Pods Resources */ = {
@@ -392,13 +679,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D91D2AE801C23DC9816BF81 /* [CP] Copy Pods Resources */ = {
@@ -422,13 +712,75 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3AA7E4C1EBAFB98E865C8DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken-iOS/JWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3C014B4D0661E6B15F25671 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift-tvOS/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken-tvOS/JWT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC2A3AF21CC3DBE676C1F9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D1A6D44F1FACFC37B9202F78 /* [CP] Check Pods Manifest.lock */ = {
@@ -437,13 +789,34 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8A909EAEB080099465862DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MATRIX Auth SDK tvOS Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F49F5871F246FF27AF3E14A0 /* [CP] Copy Pods Resources */ = {
@@ -464,6 +837,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		523B6C111F19035E003224A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C441F19041A003224A4 /* MatrixAuthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C201F19036F003224A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C451F19041A003224A4 /* MatrixAuthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		523B6C2F1F19037B003224A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523B6C461F19041A003224A4 /* MatrixAuthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52BB9C181EF074B300FBB35E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,7 +899,339 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		523B6C1C1F19035E003224A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52BB9C1C1EF074B300FBB35E /* MATRIX Auth SDK macOS */;
+			targetProxy = 523B6C1B1F19035E003224A4 /* PBXContainerItemProxy */;
+		};
+		523B6C2B1F19036F003224A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52BB9C2A1EF074BD00FBB35E /* MATRIX Auth SDK iOS */;
+			targetProxy = 523B6C2A1F19036F003224A4 /* PBXContainerItemProxy */;
+		};
+		523B6C3A1F19037B003224A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52BB9C441EF074D200FBB35E /* MATRIX Auth SDK tvOS */;
+			targetProxy = 523B6C391F19037B003224A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		523B6C1D1F19035E003224A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E42F70857765D1AEDA79A77 /* Pods-MATRIX Auth SDK macOS Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		523B6C1E1F19035E003224A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEB7ED4A8F9766B5E3A466D0 /* Pods-MATRIX Auth SDK macOS Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		523B6C2D1F19036F003224A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 387B014853FEBF2FF27DBC15 /* Pods-MATRIX Auth SDK iOS Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		523B6C2E1F19036F003224A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229BEF971700D72229ECCAD6 /* Pods-MATRIX Auth SDK iOS Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		523B6C3C1F19037B003224A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42380454C6259084BD842A3A /* Pods-MATRIX Auth SDK tvOS Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-tvOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		523B6C3D1F19037B003224A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 577B008AA82A516F2AFD052F /* Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.MATRIX-Auth-SDK-tvOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		52BB9C161EF0747100FBB35E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1005,6 +1734,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		523B6C1F1F19035E003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B6C1D1F19035E003224A4 /* Debug */,
+				523B6C1E1F19035E003224A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523B6C2C1F19036F003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B6C2D1F19036F003224A4 /* Debug */,
+				523B6C2E1F19036F003224A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523B6C3B1F19037B003224A4 /* Build configuration list for PBXNativeTarget "MATRIX Auth SDK tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523B6C3C1F19037B003224A4 /* Debug */,
+				523B6C3D1F19037B003224A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		52BB9C151EF0747100FBB35E /* Build configuration list for PBXProject "MATRIX Auth SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
