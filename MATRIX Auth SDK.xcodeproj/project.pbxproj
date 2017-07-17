@@ -284,6 +284,7 @@
 				523B6C131F19035E003224A4 /* Resources */,
 				4F6478A21E70AFDCBBAB760F /* [CP] Embed Pods Frameworks */,
 				6880085BBF7A8A9EA6476A94 /* [CP] Copy Pods Resources */,
+				52B7D88A1F1D4502002646BE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -305,6 +306,7 @@
 				523B6C221F19036F003224A4 /* Resources */,
 				B3AA7E4C1EBAFB98E865C8DA /* [CP] Embed Pods Frameworks */,
 				517DC6D310EEC00613D5A3AC /* [CP] Copy Pods Resources */,
+				52B7D88B1F1D4557002646BE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -326,6 +328,7 @@
 				523B6C311F19037B003224A4 /* Resources */,
 				B3C014B4D0661E6B15F25671 /* [CP] Embed Pods Frameworks */,
 				CEC2A3AF21CC3DBE676C1F9F /* [CP] Copy Pods Resources */,
+				52B7D88C1F1D455D002646BE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -642,6 +645,45 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MATRIX Auth SDK iOS Tests/Pods-MATRIX Auth SDK iOS Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		52B7D88A1F1D4502002646BE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"$SRCROOT/bin/write.sh\"";
+		};
+		52B7D88B1F1D4557002646BE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"$SRCROOT/bin/write.sh\"";
+		};
+		52B7D88C1F1D455D002646BE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"$SRCROOT/bin/write.sh\"";
 		};
 		6880085BBF7A8A9EA6476A94 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

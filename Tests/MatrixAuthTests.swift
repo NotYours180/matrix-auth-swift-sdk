@@ -28,11 +28,60 @@
 import XCTest
 import MatrixAuthSDK
 
+enum ClientKey: String {
+    case devClientId      = "DEV_CLIENT_ID"
+    case devClientSecret  = "DEV_CLIENT_SECRET"
+    case prodClientId     = "PROD_CLIENT_ID"
+    case prodClientSecret = "PROD_CLIENT_SECRET"
+}
+
+extension Bundle {
+    static let current = Bundle(for: MatrixAuthTests.self)
+
+    func infoString(for key: ClientKey) -> String? {
+        return infoDictionary?[key.rawValue] as? String
+    }
+}
+
+extension MatrixAuth {
+    convenience init(env: Environment) throws {
+        let bundle = Bundle.current
+        let clientId, clientSecret: String
+
+        switch env {
+        case .dev:
+            clientId = bundle.infoString(for: .devClientId) ?? ""
+            clientSecret = bundle.infoString(for: .devClientSecret) ?? ""
+        case .prod:
+            clientId = bundle.infoString(for: .prodClientId) ?? ""
+            clientSecret = bundle.infoString(for: .prodClientSecret) ?? ""
+        case .rc:
+            clientId = ""
+            clientSecret = ""
+        }
+
+        try self.init(env: env, clientId: clientId, clientSecret: clientSecret)
+    }
+}
+
 class MatrixAuthTests: XCTestCase {
 
-    // Ensures that test runs
-    func testPlaceholder() {
-        XCTAssert(true)
+    func testLogin() throws {
+        let auth = try MatrixAuth(env: .dev)
+
+        let exp = expectation(description: "handler")
+
+        // TODO: Handle username and password
+        let username = ""
+        let password = ""
+
+        auth.authenticate(username: username, password: password) { (success, dict) in
+            print(success)
+            print(dict)
+            exp.fulfill()
+        }
+
+        waitForExpectations(timeout: 10)
     }
 
 }
