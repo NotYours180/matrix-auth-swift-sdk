@@ -8,5 +8,5 @@ env:
     - FRAMEWORK_NAME="MATRIX Auth SDK"
 install:
   - gem install xcpretty -N
-  - gem install cocoapods
+  - pod install
 script: ./ci/travis.sh
