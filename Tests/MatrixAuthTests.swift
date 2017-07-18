@@ -67,21 +67,32 @@ extension MatrixAuth {
 class MatrixAuthTests: XCTestCase {
 
     func testLogin() throws {
-        let auth = try MatrixAuth(env: .dev)
-
-        let exp = expectation(description: "handler")
-
         // TODO: Handle username and password
-        let username = ""
-        let password = ""
+        let creds = [
+            /* Dev  */ (
+                username: "",
+                password: ""
+            ),
+            /* Prod */ (
+                username: "",
+                password: ""
+            )
+        ]
 
-        auth.authenticate(username: username, password: password) { (success, dict) in
-            print(success)
-            print(dict)
-            exp.fulfill()
+        let envs: [Environment] = [.dev, .prod]
+
+        for (cred, env) in zip(creds, envs) {
+            let auth = try MatrixAuth(env: env)
+            let exp = expectation(description: "handler")
+
+            auth.authenticate(username: cred.username, password: cred.password) { (success, dict) in
+                print(success)
+                print(dict)
+                exp.fulfill()
+            }
+            
+            waitForExpectations(timeout: 10)
         }
-
-        waitForExpectations(timeout: 10)
     }
 
 }
