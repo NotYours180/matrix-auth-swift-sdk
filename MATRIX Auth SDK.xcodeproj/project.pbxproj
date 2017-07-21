@@ -24,6 +24,18 @@
 		52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		52F45F261F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F271F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F281F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F291F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F2B1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2C1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2D1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2E1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F301F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F311F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F321F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F331F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
 		56DAF30EE2A455A7D24D9BE0 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAA81CA7AA8FA5EC92A08D3 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework */; };
 		59ADDE9866AA28665E3B1DAC /* Pods_MATRIX_Auth_SDK_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */; };
 		8E3742F3AF17916885EA9B7B /* Pods_MATRIX_Auth_SDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3061B16DAD8371993A7FA71 /* Pods_MATRIX_Auth_SDK_iOS.framework */; };
@@ -75,6 +87,9 @@
 		52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C4E1EF0759100FBB35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BB9C501EF075B300FBB35E /* MatrixAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuth.swift; sourceTree = "<group>"; };
+		52F45F251F2263F800BCB9A5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		52F45F2A1F2264D900BCB9A5 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		577B008AA82A516F2AFD052F /* Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5881A6C531D499516C476852 /* Pods-MATRIX Auth SDK iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				52BB9C501EF075B300FBB35E /* MatrixAuth.swift */,
+				52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */,
+				52F45F2A1F2264D900BCB9A5 /* Helpers.swift */,
 				525730671F06C0C100CA843C /* Environment.swift */,
+				52F45F251F2263F800BCB9A5 /* Errors.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -907,8 +925,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F301F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F261F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				525730681F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2B1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,8 +937,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F311F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F271F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				525730691F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2C1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,8 +949,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F321F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F281F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				5257306A1F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2D1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,8 +961,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F331F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F291F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				5257306B1F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2E1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

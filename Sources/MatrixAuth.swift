@@ -29,6 +29,9 @@ import Foundation
 import Alamofire
 import JWT
 
+import struct Result.AnyError
+import enum Result.Result
+
 /// Handles MATRIX API authorization.
 public final class MatrixAuth {
 
@@ -44,38 +47,13 @@ public final class MatrixAuth {
         /// The provided client secret is invalid (e.g. empty).
         case invalidClientSecret
 
-        /// Failed to get a user ID or expiration from a JWT.
-        case decodeFailure
-
-        /// Failed to get user access token.
-        case unauthenticated
-
     }
 
-    /// A completion handler that takes a success boolean and result dictionary.
-    public typealias CompletionHandler = (Bool, [String: Any]) -> ()
+    internal var _baseURL: String
 
-    private var _baseURL: String
+    internal var _clientId: String
 
-    private var _clientId: String
-
-    private var _clientSecret: String
-
-    private var _refreshToken: Timer?
-
-    private var _accessTokenToRefresh: String?
-
-    /// The current user ID.
-    public var userId: String?
-
-    /// The user access token for the current authorized user. Fails silently if the token could not be decoded.
-    public var userAccessToken: String? {
-        didSet {
-            if let token = userAccessToken, !token.isEmpty {
-                try? decodeJWT(token: token)
-            }
-        }
-    }
+    internal var _clientSecret: String
 
     /// Creates an instance for a given environment, client ID, and client secret.
     ///
@@ -102,89 +80,8 @@ public final class MatrixAuth {
         _clientSecret = clientSecret
     }
 
-    /// Decodes the JSON web token, obtaining a user ID and refresh token.
-    ///
-    /// - throws: `Error.decodeFailure` if the user ID or expiration could not be retrieved.
-    private func decodeJWT(token: String) throws {
-        if let rt = _refreshToken {
-            rt.invalidate()
-            _refreshToken = nil
-        }
-
-        let cs: ClaimSet = try decode(token, algorithm: .hs256(Data()), verify: false, audience: nil, issuer: nil)
-
-        guard let uid = cs["uid"] as? String, let exp = cs["exp"] as? Double else {
-            throw Error.decodeFailure
-        }
-
-        userId = uid
-        let date = Date(timeIntervalSince1970: exp)
-        let seconds = date.timeIntervalSinceNow
-
-        _refreshToken = Timer(timeInterval: seconds,
-                              target: self,
-                              selector: #selector(self.refreshUserAccessToken),
-                              userInfo: nil,
-                              repeats: false)
-    }
-
-    private func genericRequestResponse(response: Any?, statusCode: Int?, error: Swift.Error?, completionHandler: @escaping CompletionHandler) {
-        var requestSuccess = false
-        let result: [String: Any]
-
-        if let error = error {
-            result = ["message": error.localizedDescription]
-        } else if let json = response as? [String: Any] {
-            if json["status"] as? String == "OK", let results = json["results"] {
-                if results is [Any] {
-                    result = ["results": results]
-                } else if results is String {
-                    result = ["message": results]
-                } else {
-                    result = results as! [String: Any]
-                }
-                requestSuccess = true
-            } else if let errorMessage = json["error"] {
-                result = ["message": errorMessage]
-            } else {
-                result = ["message": "Unknown error"]
-            }
-        } else if let statusCode = statusCode {
-            result = ["status code": "\(statusCode)"]
-        } else {
-            result = ["message": "Unknown error"]
-        }
-
-        DispatchQueue.main.async {
-            completionHandler(requestSuccess, result)
-        }
-    }
-
-    @objc private func refreshUserAccessToken() {
-        let url = _baseURL + "/v1/oauth2/user/refresh_token"
-        let parameters: [String: Any] = [
-            "client_id": _clientId,
-            "client_secret": _clientSecret,
-            "grant_type": "refresh_token",
-            "jwt_token": true,
-            "refresh_token": _accessTokenToRefresh as Any
-        ]
-        request(url, method: .post, parameters: parameters).responseJSON { [weak self] response in
-            guard let `self` = self else {
-                return
-            }
-            self.genericRequestResponse(response: response.result.value,
-                                         statusCode: response.response?.statusCode,
-                                         error: response.result.error) { success, result in
-                if success, let token = result["access_token"] as? String {
-                    self.userAccessToken = token
-                }
-            }
-        }
-    }
-
     /// Authenticates `username` with `password` and sets the corresponding values within `self`.
-    public func authenticate(username: String, password: String, completionHandler: @escaping CompletionHandler) {
+    public func authenticate(username: String, password: String, completionHandler: @escaping (Result<UserAuth, UserAuthError>) -> ()) {
         let url = _baseURL + "/v1/oauth2/user/token"
         let parameters: [String: Any] = [
             "client_id": _clientId,
@@ -195,37 +92,42 @@ public final class MatrixAuth {
             "username": username,
             "password": password
         ]
-        request(url, method: .post, parameters: parameters).responseJSON { [weak self] response in
-            guard let `self` = self else {
-                return
-            }
-            let val = response.result.value
-            let err = response.result.error
-            let stat = response.response?.statusCode
-            self.genericRequestResponse(response: val, statusCode: stat, error: err) { success, result in
-                if let token = result["access_token"] as? String {
-                    self.userAccessToken = token
-                }
-                if let token = result["refresh_token"] as? String {
-                    self._accessTokenToRefresh = token
-                }
-                completionHandler(success, result)
-            }
-        }
-    }
 
-    /// Logs the current user out, invalidating the user access token.
-    public func logout() {
-        userAccessToken = nil
-        _accessTokenToRefresh = nil
-        userId = nil
-        if let rt = _refreshToken {
-            rt.invalidate()
+        request(url, method: .post, parameters: parameters).responseJSON { response in
+            let result: Result<UserAuth, UserAuthError>
+
+            switch _results(of: response) {
+            case let .success(results):
+                guard let accessToken = results["access_token"] as? String,
+                    let refreshToken = results["refresh_token"] as? String
+                else {
+                    result = .failure(.response(.retrieval(results)))
+                    break
+                }
+
+                switch _decode(accessToken: accessToken) {
+                case let .success((id, exp)):
+                    result = .success(UserAuth(matrixAuth: self,
+                                               id: id,
+                                               refreshToken: refreshToken,
+                                               accessToken: accessToken,
+                                               expiration: exp))
+                case let .failure(error):
+                    result = .failure(.decode(error))
+                }
+            case let .failure(error):
+                result = .failure(.response(error))
+            }
+
+            completionHandler(result)
         }
     }
 
     /// Registers a new user with a `username`, `password`, and `role`.
-    public func registerNewUser(username: String, password: String, role: String, completionHandler: @escaping CompletionHandler) {
+    public func registerNewUser(username: String,
+                                password: String,
+                                role: String,
+                                completionHandler: @escaping (Result<[String: Any], ResponseError>) -> ()) {
         let url = _baseURL + "/v1/oauth2/user/register"
         let parameters: [String: Any] = [
             "username": username,
@@ -234,68 +136,19 @@ public final class MatrixAuth {
             "active": true,
             "client_id": _clientId
         ]
-        request(url, method: .post, parameters: parameters).responseJSON { [weak self] response in
-            self?.genericRequestResponse(response: response.result.value,
-                                         statusCode: response.response?.statusCode,
-                                         error: response.result.error,
-                                         completionHandler: completionHandler)
-        }
-    }
-
-    /// Gets the secret for `deviceID`, handling the result in `completionHandler`.
-    ///
-    /// - throws: `Error.unauthenticated` if the user access token is invalid (e.g. `nil` or empty).
-    public func getDeviceSecret(deviceID: String, completionHandler: @escaping CompletionHandler) throws {
-        guard let uat = userAccessToken, !uat.isEmpty else {
-            throw Error.unauthenticated
-        }
-        let url = _baseURL + "/v2/device/secret"
-        let parameters = [
-            "device_id": deviceID,
-            "access_token": uat
-        ]
-
-        request(url, method: .get, parameters: parameters).responseJSON { [weak self] response in
-            self?.genericRequestResponse(response: response.result.value,
-                                         statusCode: response.response?.statusCode,
-                                         error: response.result.error,
-                                         completionHandler: completionHandler)
+        request(url, method: .post, parameters: parameters).responseJSON { response in
+            completionHandler(_results(of: response))
         }
     }
 
     /// Sends a request to restore the password for `username`.
-    public func forgotPassword(username: String, completionHandler: @escaping CompletionHandler) {
+    public func forgotPassword(username: String, completionHandler: @escaping (Result<[String: Any], ResponseError>) -> ()) {
         let url = _baseURL + "/v1/user/request/restore_password"
         let parameters = [
             "user_email": username
         ]
-
-        request(url, method: .post, parameters: parameters).responseJSON { [weak self] response in
-            self?.genericRequestResponse(response: response.result.value,
-                                         statusCode: response.response?.statusCode,
-                                         error: response.result.error,
-                                         completionHandler: completionHandler)
-        }
-    }
-
-    /// Gets the user details
-    ///
-    /// - throws: `Error.unauthenticated` if the user access token is invalid (e.g. `nil` or empty).
-    public func getUserDetails(userId: String, completionHandler: @escaping CompletionHandler) throws {
-        guard let uat = userAccessToken, !uat.isEmpty else {
-            throw Error.unauthenticated
-        }
-        let url = _baseURL + "/admin/user/details"
-        let parameters = [
-            "user_id": userId,
-            "access_token": uat
-        ]
-
-        request(url, method: .get, parameters: parameters).responseJSON { [weak self] response in
-            self?.genericRequestResponse(response: response.result.value,
-                                         statusCode: response.response?.statusCode,
-                                         error: response.result.error,
-                                         completionHandler: completionHandler)
+        request(url, method: .post, parameters: parameters).responseJSON { response in
+            completionHandler(_results(of: response))
         }
     }
 

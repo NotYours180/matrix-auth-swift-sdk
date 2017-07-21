@@ -85,14 +85,59 @@ class MatrixAuthTests: XCTestCase {
             let auth = try MatrixAuth(env: env)
             let exp = expectation(description: "handler")
 
-            auth.authenticate(username: cred.username, password: cred.password) { (success, dict) in
-                print(success)
-                print(dict)
+            auth.authenticate(username: cred.username, password: cred.password) { result in
+                defer {
+                    exp.fulfill()
+                }
+                guard let value = result.value else {
+                    return
+                }
+                for child in Mirror(reflecting: value).children {
+                    print(child)
+                }
+            }
+
+            waitForExpectations(timeout: 5)
+        }
+    }
+
+    func testUserDetails() throws {
+        let username = ""
+        let password = ""
+
+        let exp = expectation(description: "handler")
+
+        try MatrixAuth(env: .dev).authenticate(username: username, password: password) { result in
+            guard case let .success(user) = result else {
+                return
+            }
+            user.details { result in
+                print(result)
                 exp.fulfill()
             }
-            
-            waitForExpectations(timeout: 10)
         }
+
+        waitForExpectations(timeout: 5)
+    }
+
+    func testDeviceSecret() throws {
+        let username = ""
+        let password = ""
+        let deviceId = ""
+
+        let exp = expectation(description: "secret")
+
+        try MatrixAuth(env: .dev).authenticate(username: username, password: password) { result in
+            guard case let .success(user) = result else {
+                return
+            }
+            user.deviceSecret(for: deviceId) { result in
+                print(result)
+                exp.fulfill()
+            }
+        }
+
+        waitForExpectations(timeout: 5)
     }
 
 }
