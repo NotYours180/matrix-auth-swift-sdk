@@ -28,17 +28,23 @@
 import XCTest
 import MatrixAuthSDK
 
-enum ClientKey: String {
+enum InfoKey: String {
+
+    case devUsername      = "DEV_USERNAME"
+    case devPassword      = "DEV_PASSWORD"
+
     case devClientId      = "DEV_CLIENT_ID"
     case devClientSecret  = "DEV_CLIENT_SECRET"
+
     case prodClientId     = "PROD_CLIENT_ID"
     case prodClientSecret = "PROD_CLIENT_SECRET"
+
 }
 
 extension Bundle {
     static let current = Bundle(for: MatrixAuthTests.self)
 
-    func infoString(for key: ClientKey) -> String? {
+    func infoString(for key: InfoKey) -> String? {
         return infoDictionary?[key.rawValue] as? String
     }
 }
@@ -64,37 +70,42 @@ extension MatrixAuth {
     }
 }
 
+extension Environment {
+
+    public var credentials: (username: String, password: String)? {
+        let bundle = Bundle.current
+        guard case .dev = self,
+            let username = bundle.infoString(for: .devUsername),
+            let password = bundle.infoString(for: .devPassword)
+        else {
+            return nil
+        }
+        return (username, password)
+    }
+
+}
+
 class MatrixAuthTests: XCTestCase {
 
     func testLogin() throws {
-        // TODO: Handle username and password
-        let creds = [
-            /* Dev  */ (
-                username: "",
-                password: ""
-            ),
-            /* Prod */ (
-                username: "",
-                password: ""
-            )
-        ]
+        let envs: [Environment] = [.dev, /* .prod */]
 
-        let envs: [Environment] = [.dev, .prod]
-
-        for (cred, env) in zip(creds, envs) {
+        for env in envs {
             let auth = try MatrixAuth(env: env)
             let exp = expectation(description: "handler")
 
-            auth.authenticate(username: cred.username, password: cred.password) { result in
-                defer {
-                    exp.fulfill()
-                }
+            guard let (username, password) = env.credentials else {
+                continue
+            }
+
+            auth.authenticate(username: username, password: password) { result in
                 guard let value = result.value else {
                     return
                 }
                 for child in Mirror(reflecting: value).children {
                     print(child)
                 }
+                exp.fulfill()
             }
 
             waitForExpectations(timeout: 5)
@@ -102,10 +113,13 @@ class MatrixAuthTests: XCTestCase {
     }
 
     func testUserDetails() throws {
-        let username = ""
-        let password = ""
-
+        let env = Environment.dev
         let exp = expectation(description: "handler")
+
+        guard let (username, password) = env.credentials else {
+            XCTFail("Failed to get credentials for \(env)")
+            return
+        }
 
         try MatrixAuth(env: .dev).authenticate(username: username, password: password) { result in
             guard case let .success(user) = result else {
@@ -121,11 +135,14 @@ class MatrixAuthTests: XCTestCase {
     }
 
     func testDeviceSecret() throws {
-        let username = ""
-        let password = ""
-        let deviceId = ""
-
+        let deviceId = "1234"
+        let env = Environment.dev
         let exp = expectation(description: "secret")
+
+        guard let (username, password) = env.credentials else {
+            XCTFail("Failed to get credentials for \(env)")
+            return
+        }
 
         try MatrixAuth(env: .dev).authenticate(username: username, password: password) { result in
             guard case let .success(user) = result else {
