@@ -7,8 +7,8 @@ xcodebuild -version
 function build() {
     for cfg in Debug Release; do
         xcodebuild \
-            -project "$FRAMEWORK_NAME.xcodeproj" \
-            -scheme  "$FRAMEWORK_NAME $1" \
+            -workspace "$FRAMEWORK_NAME.xcworkspace" \
+            -scheme    "$FRAMEWORK_NAME $1" \
             -destination "$2" \
             -configuration "$cfg" \
             ONLY_ACTIVE_ARCH=NO \
