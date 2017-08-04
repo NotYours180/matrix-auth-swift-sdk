@@ -72,7 +72,7 @@ extension MatrixAuth {
 
 extension Environment {
 
-    public var credentials: (username: String, password: String)? {
+    var credentials: (username: String, password: String)? {
         let bundle = Bundle.current
         guard case .dev = self,
             let username = bundle.infoString(for: .devUsername),
