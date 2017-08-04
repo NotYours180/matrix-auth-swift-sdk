@@ -58,7 +58,7 @@ public final class MatrixAuth {
     /// Creates an instance for a given environment, client ID, and client secret.
     ///
     /// - throws: `MatrixAuth.Error` if the ID or secret are invalid (e.g. empty).
-    public convenience init(env: Environment, clientId: String, clientSecret: String) throws {
+    public convenience init(env: Environment = .prod, clientId: String, clientSecret: String) throws {
         try self.init(baseURL: env.apiURL.absoluteString, clientId: clientId, clientSecret: clientSecret)
     }
 
