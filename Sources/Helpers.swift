@@ -52,7 +52,8 @@ internal func _decode(accessToken: String) -> Result<(id: String, exp: TimeInter
         guard let id = cs["uid"] as? String, let exp = cs["exp"] as? TimeInterval else {
             return .failure(.retrieval(cs))
         }
-        return .success((id, exp))
+        let value = (id, exp)
+        return .success(value)
     } catch {
         return .failure(.jwt(error))
     }
