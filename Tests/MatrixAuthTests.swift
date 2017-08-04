@@ -102,9 +102,6 @@ class MatrixAuthTests: XCTestCase {
                 guard let value = result.value else {
                     return
                 }
-                for child in Mirror(reflecting: value).children {
-                    print(child)
-                }
                 exp.fulfill()
             }
 
@@ -126,7 +123,6 @@ class MatrixAuthTests: XCTestCase {
                 return
             }
             user.details { result in
-                print(result)
                 exp.fulfill()
             }
         }
@@ -149,7 +145,6 @@ class MatrixAuthTests: XCTestCase {
                 return
             }
             user.deviceSecret(for: deviceId) { result in
-                print(result)
                 exp.fulfill()
             }
         }
