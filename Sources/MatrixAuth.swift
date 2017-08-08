@@ -48,19 +48,19 @@ import enum Result.Result
 ///
 ///         user.details { result in
 ///             switch result {
-///                 case let .success(details):
-///                     print(details)
-///                 case let .failure(error):
-///                     ...
+///             case let .success(details):
+///                 print(details)
+///             case let .failure(error):
+///                 ...
 ///             }
 ///         }
 ///
 ///         user.deviceSecret(for: "MyDeviceId") { result in
 ///             switch result {
-///                 case let .success(secret):
-///                     print(secret)
-///                 case let .failure(error):
-///                     ...
+///             case let .success(secret):
+///                 print(secret)
+///             case let .failure(error):
+///                 ...
 ///             }
 ///         }
 ///     case let .failure(error):
