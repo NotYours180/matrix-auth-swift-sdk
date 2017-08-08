@@ -1,3 +1,4 @@
+source "https://github.com/CocoaPods/Specs"
 use_frameworks!
 
 def shared_pods
