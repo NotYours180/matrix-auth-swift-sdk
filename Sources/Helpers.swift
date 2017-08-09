@@ -34,8 +34,12 @@ internal func _results(of response: DataResponse<Any>) -> Result<[String: Any], 
     switch response.result {
     case let .success(value):
         if let json = value as? [String: Any] {
-            if json["status"] as? String == "OK", let results = json["results"] as? [String: Any] {
-                return .success(results)
+            if json["status"] as? String == "OK"{
+                if let results = json["results"] as? [String: Any] {
+                    return .success(results)
+                } else if let result = json["results"] as? String {
+                    return .success(["message":result])
+                }
             } else if let message = json["error"] as? String {
                 return .failure(.api(message))
             }
