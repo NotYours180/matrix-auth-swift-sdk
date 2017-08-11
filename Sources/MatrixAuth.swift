@@ -33,42 +33,6 @@ import struct Result.AnyError
 import enum Result.Result
 
 /// Handles MATRIX API authorization.
-///
-/// Callbacks are called asynchronously and take a `Result<T, E>`. As a result,
-/// errors must be handled and can't be ignored.
-///
-/// ```
-/// let auth = try MatrixAuth(clientId: ..., clientSecret: ...)
-///
-/// auth.authenticate(username: "your@email.com", password: "1234") { result in
-///     switch result {
-///     case let .success(user):
-///         // Do stuff with user
-///         ...
-///
-///         user.details { result in
-///             switch result {
-///             case let .success(details):
-///                 print(details)
-///             case let .failure(error):
-///                 ...
-///             }
-///         }
-///
-///         user.deviceSecret(for: "MyDeviceId") { result in
-///             switch result {
-///             case let .success(secret):
-///                 print(secret)
-///             case let .failure(error):
-///                 ...
-///             }
-///         }
-///     case let .failure(error):
-///         // Authentication failure; handle error
-///         ...
-///     }
-/// }
-/// ```
 public final class MatrixAuth {
 
     /// An error thrown by `MatrixAuth`.
