@@ -155,6 +155,21 @@ public final class UserAuth {
         }
     }
 
+    /// Registers a new device with a `deviceId` and `name`.
+    public func registerNewDevice(deviceId: String,
+                                  name: String, completionHandler: @escaping (Result<[String: Any], ResponseError>) -> ()) {
+        let url = matrixAuth._baseURL + "/v1/device/register"
+        let parameters: [String: Any] = [
+            "device_id": deviceId,
+            "name": name,
+            "mobile": false,
+            "access_token": accessToken
+        ]
+        request(url, method: .post, parameters: parameters).responseJSON { response in
+            completionHandler(_results(of: response))
+        }
+    }
+
     /// Gets the user details.
     public func details(completionHandler: @escaping (Result<[String: Any], ResponseError>) -> ()) {
         let url = matrixAuth._baseURL + "/admin/user/details"
