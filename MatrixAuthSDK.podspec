@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
     s.source_files              = "Sources/**/*.swift"
     s.dependency "Alamofire", "~> 4"
     s.dependency "JSONWebToken", "~> 2"
+    s.dependency "Result", "~> 3"
 end

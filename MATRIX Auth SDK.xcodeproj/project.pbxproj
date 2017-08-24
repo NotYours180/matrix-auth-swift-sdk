@@ -24,6 +24,18 @@
 		52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
 		52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB9C501EF075B300FBB35E /* MatrixAuth.swift */; };
+		52F45F261F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F271F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F281F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F291F2263F800BCB9A5 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F251F2263F800BCB9A5 /* Errors.swift */; };
+		52F45F2B1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2C1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2D1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F2E1F2264D900BCB9A5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2A1F2264D900BCB9A5 /* Helpers.swift */; };
+		52F45F301F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F311F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F321F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
+		52F45F331F2265CC00BCB9A5 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */; };
 		56DAF30EE2A455A7D24D9BE0 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAA81CA7AA8FA5EC92A08D3 /* Pods_MATRIX_Auth_SDK_iOS_Tests.framework */; };
 		59ADDE9866AA28665E3B1DAC /* Pods_MATRIX_Auth_SDK_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */; };
 		8E3742F3AF17916885EA9B7B /* Pods_MATRIX_Auth_SDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3061B16DAD8371993A7FA71 /* Pods_MATRIX_Auth_SDK_iOS.framework */; };
@@ -75,6 +87,9 @@
 		52BB9C451EF074D200FBB35E /* MatrixAuthSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MatrixAuthSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BB9C4E1EF0759100FBB35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BB9C501EF075B300FBB35E /* MatrixAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAuth.swift; sourceTree = "<group>"; };
+		52F45F251F2263F800BCB9A5 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		52F45F2A1F2264D900BCB9A5 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		577B008AA82A516F2AFD052F /* Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS Tests/Pods-MATRIX Auth SDK tvOS Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5881A6C531D499516C476852 /* Pods-MATRIX Auth SDK iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK iOS/Pods-MATRIX Auth SDK iOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C4C8056F23D5A37405E6FE0 /* Pods_MATRIX_Auth_SDK_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				52BB9C501EF075B300FBB35E /* MatrixAuth.swift */,
+				52F45F2F1F2265CC00BCB9A5 /* UserAuth.swift */,
+				52F45F2A1F2264D900BCB9A5 /* Helpers.swift */,
 				525730671F06C0C100CA843C /* Environment.swift */,
+				52F45F251F2263F800BCB9A5 /* Errors.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -555,7 +573,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1F98B8D94D097154F1F2CC2F /* [CP] Check Pods Manifest.lock */ = {
@@ -573,7 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4518394D3307A1474F368217 /* [CP] Check Pods Manifest.lock */ = {
@@ -591,7 +609,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4A7ADFDAB160F9BA211A76BF /* [CP] Copy Pods Resources */ = {
@@ -619,12 +637,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift-macOS/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONWebToken-macOS/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-macOS/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -730,7 +750,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D91D2AE801C23DC9816BF81 /* [CP] Copy Pods Resources */ = {
@@ -763,7 +783,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3AA7E4C1EBAFB98E865C8DA /* [CP] Embed Pods Frameworks */ = {
@@ -776,12 +796,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift-iOS/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONWebToken-iOS/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -798,12 +820,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift-tvOS/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONWebToken-tvOS/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-tvOS/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -840,7 +864,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D8A909EAEB080099465862DE /* [CP] Check Pods Manifest.lock */ = {
@@ -858,7 +882,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F49F5871F246FF27AF3E14A0 /* [CP] Copy Pods Resources */ = {
@@ -907,8 +931,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F301F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F261F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C511EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				525730681F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2B1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -916,8 +943,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F311F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F271F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C521EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				525730691F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2C1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -925,8 +955,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F321F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F281F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C531EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				5257306A1F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2D1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,8 +967,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F45F331F2265CC00BCB9A5 /* UserAuth.swift in Sources */,
+				52F45F291F2263F800BCB9A5 /* Errors.swift in Sources */,
 				52BB9C541EF075B300FBB35E /* MatrixAuth.swift in Sources */,
 				5257306B1F06C0C100CA843C /* Environment.swift in Sources */,
+				52F45F2E1F2264D900BCB9A5 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,6 +1313,25 @@
 		52BB9C161EF0747100FBB35E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.auth-swift-sdk";
 				PRODUCT_NAME = MatrixAuthSDK;
 				SWIFT_VERSION = 3.0;
@@ -1286,6 +1341,23 @@
 		52BB9C171EF0747100FBB35E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "one.matrix.auth-swift-sdk";
 				PRODUCT_NAME = MatrixAuthSDK;
 				SWIFT_VERSION = 3.0;
@@ -1436,7 +1508,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1500,7 +1572,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

@@ -4,26 +4,21 @@ set -e -o pipefail
 
 xcodebuild -version
 
-xcodebuild \
-    -workspace "$FRAMEWORK_NAME.xcworkspace" \
-    -scheme "$FRAMEWORK_NAME macOS" \
-    ONLY_ACTIVE_ARCH=YES \
-    test | xcpretty
+function build() {
+    for cfg in Debug Release; do
+        xcodebuild \
+            -workspace "$FRAMEWORK_NAME.xcworkspace" \
+            -scheme    "$FRAMEWORK_NAME $1" \
+            -destination "$2" \
+            -configuration "$cfg" \
+            ONLY_ACTIVE_ARCH=NO \
+            test | xcpretty
+    done
+}
 
-xcodebuild \
-    -workspace "$FRAMEWORK_NAME.xcworkspace" \
-    -scheme "$FRAMEWORK_NAME iOS" \
-    -sdk iphonesimulator \
-    -destination "platform=iOS Simulator,name=iPhone 6,OS=10.1" \
-    ONLY_ACTIVE_ARCH=NO \
-    test | xcpretty
-
-xcodebuild \
-    -workspace "$FRAMEWORK_NAME.xcworkspace" \
-    -scheme "$FRAMEWORK_NAME tvOS" \
-    -sdk appletvsimulator \
-    -destination "platform=tvOS Simulator,name=Apple TV 1080p" \
-    ONLY_ACTIVE_ARCH=NO \
-    test | xcpretty
+# ----- OS: --- Destination:
+build   macOS   "arch=x86_64"
+build   iOS     "OS=9.0,name=iPhone 6"
+build   tvOS    "OS=9.0,name=Apple TV 1080p"
 
 pod lib lint --quick
