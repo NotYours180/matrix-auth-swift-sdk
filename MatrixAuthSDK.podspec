@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
     s.name                      = "MatrixAuthSDK"
-    s.version                   = "1.0.0"
+    s.version                   = "1.0.1"
     s.summary                   = "MATRIX Auth SDK for Swift."
     s.homepage                  = "https://github.com/matrix-io/matrix-auth-swift-sdk"
-    s.license                   = { :type => "MIT", :file => "LICENSE.txt" }
+    s.license                   = { :type => "MIT", :file => "LICENSE.md" }
     s.author                    = "MATRIX Labs"
     s.social_media_url          = "https://twitter.com/MATRIX_Creator"
     s.ios.deployment_target     = "8.0"
