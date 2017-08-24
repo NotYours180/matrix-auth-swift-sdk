@@ -20,7 +20,7 @@ MATRIX Authentication framework for Swift
 To integrate MATRIX Auth SDK into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-    pod 'MatrixAuthSDK', '~> 1.0.0'
+    pod 'MatrixAuthSDK'
 ```
 
 Then, run the following command:
