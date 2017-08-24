@@ -21,5 +21,4 @@ build   macOS   "arch=x86_64"
 build   iOS     "OS=9.0,name=iPhone 6"
 build   tvOS    "OS=9.0,name=Apple TV 1080p"
 
-swiftlint
 pod lib lint --quick
