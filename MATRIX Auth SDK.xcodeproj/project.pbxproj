@@ -96,6 +96,7 @@
 		63EB6853581B35EA9EAE0A79 /* Pods-MATRIX Auth SDK tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK tvOS/Pods-MATRIX Auth SDK tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		7E7AAE52A0980812BA82407A /* Pods_MATRIX_Auth_SDK_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE2B9C1C7EAE1DCD222C1C1 /* Pods_MATRIX_Auth_SDK_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MATRIX_Auth_SDK_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A7963F1F82EC990068D787 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7F93EC71F82E2A400471B76 /* MatrixAuthSDK.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MatrixAuthSDK.podspec; sourceTree = "<group>"; };
 		A7F93EC81F82E42F00471B76 /* secrets.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = secrets.sh; path = bin/secrets.sh; sourceTree = "<group>"; };
 		AFA28B2C4F96DE97A6F65FFF /* Pods-MATRIX Auth SDK watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MATRIX Auth SDK watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MATRIX Auth SDK watchOS/Pods-MATRIX Auth SDK watchOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +197,7 @@
 		52BB9C111EF0747100FBB35E = {
 			isa = PBXGroup;
 			children = (
+				A7A7963F1F82EC990068D787 /* README.md */,
 				A7F93EC81F82E42F00471B76 /* secrets.sh */,
 				A7F93EC71F82E2A400471B76 /* MatrixAuthSDK.podspec */,
 				52BB9C4F1EF0759100FBB35E /* Sources */,

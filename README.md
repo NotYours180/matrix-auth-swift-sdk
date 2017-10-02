@@ -6,12 +6,12 @@ MATRIX Authentication framework for Swift
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MatrixAuthSDK.svg)](https://img.shields.io/cocoapods/v/MatrixAuthSDK.svg)
 [![License](https://img.shields.io/cocoapods/l/ImagePicker.svg?style=flat)](http://cocoadocs.org/docsets/ImagePicker)
 [![Platform](https://img.shields.io/cocoapods/p/ImagePicker.svg?style=flat)](http://cocoadocs.org/docsets/ImagePicker)
-![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.1, 8.2, 8.3
-- Swift 3.0, 3.1, 3.2
+- Xcode 8.1, 8.2, 8.3, 9.0
+- Swift 3.0, 3.1, 3.2, 4.0
 
 ## Installation
 
