@@ -99,7 +99,7 @@ class MatrixAuthTests: XCTestCase {
             }
 
             auth.authenticate(username: username, password: password) { result in
-                guard let value = result.value else {
+                guard result.value != nil else {
                     return
                 }
                 exp.fulfill()

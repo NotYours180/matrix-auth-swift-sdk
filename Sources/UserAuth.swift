@@ -117,7 +117,7 @@ public final class UserAuth {
                                                selector: #selector(self._refreshAccessToken),
                                                userInfo: nil,
                                                repeats: false)
-                    result = .success()
+                    result = .success(())
                 case let .failure(error):
                     result = .failure(.decode(error))
                 }
